@@ -10,10 +10,13 @@ const  fetchCoordsByIP = require('./iss');
 //   console.log('It worked! Returned IP:' , ip);
 // });
 
+const coords = {
+  longitude: "-79.7172",
+  latitude: "43.5639"
+};
 
 
-
-fetchCoordsByIP('99.247.15.231',(error,data)=>{
+fetchCoordsByIP(coords,(error,data)=>{
   if (error) {
     console.log('It did not work.',error);
     return;
@@ -22,3 +25,4 @@ fetchCoordsByIP('99.247.15.231',(error,data)=>{
   console.log('It worked sending data.',data);
     
 });
+
